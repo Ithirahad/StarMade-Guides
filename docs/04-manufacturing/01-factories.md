@@ -104,8 +104,8 @@ When viewing the crafting graph through a Factory Manager, nodes are color-coded
 
 ## Tips
 
-- **Start small.** Craft a basic factory (from 10 Metal Meshes or 10 Crystal Circuits in the personal micro-factory) to begin. The macro factory comes later.
 - **Power matters.** A factory without power stalls. Build a sufficiently large reactor in order to supply your factory.
 - **Use View Graph every time** you set up a new production line — it clearly shows exactly what inputs the factory expects at each step.
 - Multiple factories can be linked to one source factory — the source will supply whatever any of its connected factories need.
 - **Use a Factory Manager** for complex production chains — it eliminates the tedious manual setup of recipe assignment and linking, especially when producing blocks that require many intermediate steps.
+- **Reduce, reuse, recycle!** All blocks are made from a small selection of common Components. If you have spare blocks from a previous building project, salvage mission, or loot from combat, they may be a gold mine in disguise! Try disassembling leftover blocks in the Block Recycler and see if they provide the necessary Components for your new project, before running off on a mining trip for fresh resources.
