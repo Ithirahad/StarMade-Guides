@@ -62,7 +62,7 @@ The **Factory Manager** block automates an entire production chain. Instead of m
 ### How It Works
 
 1. **Place a Factory Manager** on your station.
-2. **Connect it to your factories** — link the Factory Manager to every factory you want it to control using `C` (on the manager) and `V` (on each factory). It supports all factory types (Basic, Standard, Advanced, Micro Assembler, Capsule Assembler).
+2. **Connect it to your factories** — link the Factory Manager to every factory you want it to control using `C` (on the manager) and `V` (on each factory). It supports all factory types.
 3. **Connect it to storage** — link the Factory Manager to inventories (storage blocks) so it can see what raw materials are available.
 4. **Place an order** — tell the manager what you want produced. Orders can come from:
    - A **factory** — the manager reads what recipe is set and ensures all intermediate ingredients are produced.
