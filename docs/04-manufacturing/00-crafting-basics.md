@@ -25,7 +25,7 @@ Blocks can also be broken down into their constituent Components via the **Block
 
 ## Block Assembly
 
-Components can be assembled into blocks by several means. The most basic way to do this is using the Block Assembler, a factory that combines components into individual blocks. The "Change Recipe" button allows you to specify which block to create.
+Components can be assembled into blocks by several means. The most basic way to do this is using the Block Assembler, a factory that combines components into individual blocks. The "Change Production" button allows you to specify which block to create.
 Shipyard Schematics and Blueprints can also be filled out using Components in order to build pre-designed ships and structures directly.
 
 ## Starting from Scratch
