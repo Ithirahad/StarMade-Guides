@@ -6,8 +6,6 @@ Asteroids are massive boulders found in space orbiting stars. They are a standar
 
 ### Where To Find Them
 
-![asteroidmap.png](assets/asteroidmap.png)
-
 Asteroids can occur throughout star-systems, but are primarily concentrated within Asteroid Belts. These are marked in yellow on your Map.
 
 ![asteroids_fig2.jpg](https://web.archive.org/web/20241010090719im_/https://starmadepedia.net/images/c/cd/Asteroid_belt_orbits.jpg)
