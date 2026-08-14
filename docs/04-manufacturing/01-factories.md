@@ -1,6 +1,22 @@
 # Factories & Production
 
-The **Block Assembler** is the main production block in StarMade. It can craft any block in the game, but only performs the final assembly step of the crafting tree. A full production line requires multiple linked factories.
+Production or 'crafting' in StarMade is primarily achieved via various types of **Factories**. A full production line requires multiple linked factories.
+
+## Types of Factories
+
+### Refineries
+- Basic Capsule Refinery: Produces mesh/composite from basic ores, and refined resource Capsules from uncommon ores.
+- Catalytic Capsule Refinery: Consumes Catalyst items to refine ores more efficiently than the Basic Refinery. Catalysts require extremely rare resources to manufacture.
+
+### Manufacturing Factories
+- Component Fabricator: Produces any Component from Capsules/Mesh/Composite.
+- Block Assembler: Creates blocks from Components.
+- Chemical Factory: Produces Catalysts from ultra rare resources for enhanced refining in the Catalytic Capsule Refinery. (In future versions of StarMade, the Chemical Factory will also produce other intermediate products for efficient specialized refining and Component production.)
+- Shipyard: Produces Ships according to provided blueprints, or allows you to create new designs without spending blocks.
+
+### Reclamation Factories
+- Block Recycler: Reclaims the constituent Components from any Block placed inside it.
+- Micro Reprocessor: Transforms decayed scrap materials, as well as advanced metals and crystals, into basic Metal Mesh and Crystal Composite used by the Compoenet Fabricator.
 
 ## Placing a Factory
 
@@ -37,11 +53,11 @@ Your Block Assembler factory takes the **Structural Frame** and **Energy Cell** 
 
 ## Factory Linking (Chaining)
 
-Factories can pull ingredients from each other automatically using connections:
+Factories can pull ingredients from other Factories or Storages automatically using connections:
 
-1. Press `C` on the factory you want to act as the **ingredient source** (it holds raw materials or intermediate products).
-2. Press `V` on the factory that **needs** those ingredients.
-3. The second factory will now draw needed materials from the first automatically.
+1. Press `C` on the factory that needs to be supplied with items.
+2. Press `V` on the factory or storage block that produces or holds those items.
+3. The first factory will now draw needed materials from the second automatically.
 
 With a properly linked chain, you place raw materials into the bottom factory and the top factory outputs the final product — everything in between is handled automatically.
 
