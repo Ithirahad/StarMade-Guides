@@ -31,7 +31,7 @@ Shipyards can also be used to repair damaged ships or update mass-produced ships
 
 ## Deconstructing Ships
 
-Ships can [dock](01-building/02-docking-and-turrets.md/#docking-a-ship) to a Shipyard Core Anchor as they would with any other [Rail](01-building/02-docking-and-turrets.md/#rail-blocks), but with one notable difference; They must (counter-intuitively) have a Rail Docker somewhere on the ship. The position of the Rail Docker does not influence where the ship actually docks to the Core Anchor though. Instead, the ship is docked with the Ship Core at the position of the Shipyard Core Anchor. The Ship Core is **always** docked in alignment to the Shipyard Core Anchor.
+Ships can [dock](01-building/02-docking-and-turrets.md/#docking-a-ship) to a Shipyard Core Anchor as they would with any other [Rail](01-building/02-docking-and-turrets.md/#rail-blocks). If they do not have a Rail Docker, the Activation Beam from a core or camera can be used to connect with the Anchor. Either way, the ship is docked with the Ship Core at the position of the Shipyard Core Anchor. The Ship Core is **always** docked in alignment to the Shipyard Core Anchor.
 
 > The Shipyard Computer can be used to deconstruct a docked ship and save it to a design, or simply deconstruct it without saving any design. This can be used to rapidly disassemble unused AI fleets or drones.
 
