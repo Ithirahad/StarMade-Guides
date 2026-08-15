@@ -12,7 +12,7 @@ All key bindings can be remapped in the game settings. The defaults listed here 
 | Open navigation panel | `N` |
 | Open faction menu | `H` |
 
-## Astronaut Mode — With Gravity
+## Astronaut Mode
 
 | Action | Default Key |
 |--------|-------------|
@@ -20,13 +20,19 @@ All key bindings can be remapped in the game settings. The defaults listed here 
 | Move backward | `S` |
 | Strafe left | `A` |
 | Strafe right | `D` |
-| Jump | `Space` |
-| Walk (slow) | `Left Shift` |
+| Move (slow) | `Left Shift` |
 | Look around | Mouse |
 | Activate / interact | `R` |
 | Select item in hotbar | `1`–`9`, `0` / Mouse wheel |
 | Use / fire selected item | `Left Mouse Button` |
 | Secondary use | `Right Mouse Button` |
+| Sit | `O` |
+
+## Astronaut Mode — In Gravity
+
+| Action | Default Key |
+|--------|-------------|
+| Jump | `Space` |
 
 ## Astronaut Mode — Zero Gravity
 
@@ -34,8 +40,8 @@ In zero-G all the same movement keys apply, plus:
 
 | Action | Default Key |
 |--------|-------------|
-| Move up | `Space` |
-| Move down | `Left Ctrl` |
+| Float up | `E` |
+| Float down | `Q` |
 | Align to nearby structure | `Space` (tap while near) |
 
 > **Tip:** Aligning to a structure also causes you to move with it if the structure is flying. This is useful for boarding moving ships.
@@ -59,18 +65,19 @@ In zero-G all the same movement keys apply, plus:
 | Open weapon panel | `G` |
 | Open structure panel | `Delete` |
 | Select target | `F` |
+| Set current target as turret/AI target | `X` |
 
 ## Ship — Build Mode
 
 | Action | Default Key |
 |--------|-------------|
-| Move (fast) | `W` / `A` / `S` / `D` + `Left Shift` |
+| Move (fast) | `W` / `A` / `S` / `D` (+ `Left Shift`) |
 | Move up / down | `Space` / `Left Ctrl` |
 | Place block | `Left Mouse Button` |
 | Remove block | `Right Mouse Button` |
 | Select block in hotbar | `1`–`9`, `0` / Mouse wheel |
-| Advanced Build Mode | `Left Ctrl` (hold) |
-| Build tools radial menu | `` ` `` |
+| Advanced Build Tools | `Left Ctrl` (hold) |
+| Build Shapes/Modes radial menu | `` ` `` |
 | Select module (for linking) | `C` |
 | Connect module | `V` |
 | Undo last action | `Ctrl+Z` |
