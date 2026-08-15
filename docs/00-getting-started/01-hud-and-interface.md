@@ -6,15 +6,12 @@ The HUD (Heads-Up Display) gives you live information about your character and s
 
 ## Key HUD Elements
 
-### Status Bars (bottom-left)
-| Bar | Colour | What it shows |
-|-----|--------|---------------|
-| HP | Red | Your character's or ship's hull health |
-| Shield | Blue | Shield charge level |
-| Energy | Green | Available energy for weapons and tools |
+### HP Bar (bottom-left)
+Your astronaut's HP is shown in a green bar in the bottom center of the screen, above the Hotbar.
+If it drops to zero, your Astronaut dies and will respawn at your set Spawn Point.
 
-### Sector Coordinates (top-centre)
-Shows your current **sector** position as `[X, Y, Z]` next to your player name. Use these when setting navigation waypoints.
+### Sector Coordinates & Radar (top right)
+Shows your current **sector**'s coordinates as `[X, Y, Z]` along with a 3D map of the positions of things in your Sector.
 
 ### Hotbar (bottom-centre)
 Ten slots mapped to keys **1–9** and **0**. Scroll the mouse wheel to cycle selection. Holds:
@@ -28,8 +25,8 @@ Ten slots mapped to keys **1–9** and **0**. Scroll the mouse wheel to cycle se
 |-------|-------------|-------------|
 | Inventory | `I` | Personal inventory and personal crafting |
 | Navigation | `N` | Nearby objects, filters, and waypoints |
-| Catalog | Via Inventory tab | Saved ship blueprints |
-| Weapon Panel | `G` (in ship) | Assign and manage ship weapons |
+| Catalog | `U` | Saved ship blueprints |
+| Weapon Panel | `G` (in ship) | Assign and manage ship weapons & usable systems |
 | Structure Panel | `Delete` (in ship) | Manage docked entities and AI |
 | Faction Menu | `H` | Faction management |
 | Chat | `Enter` | Open chat; prefix `/f ` for faction chat |
