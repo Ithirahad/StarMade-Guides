@@ -36,6 +36,7 @@ Space Stations in/adjacent to Gas Planet sectors can also accumulate resources p
 ### Terrestrial Planets
 
 Planet surfaces contain Ore and Shard deposits far more concentrated than those in Asteroids, but they cannot be mined by ships' salvage systems. Astronauts exploring a planet's surface may even strike lucky veins, containing even more of a resource than usual.
+
 Bases built on Terrestrial Planets can also accumulate solid resources passively from some planets using a Deep Core Extractor.
 
 ### Wreckage
