@@ -24,10 +24,13 @@ Asteroid fields appear as clusters of irregular objects in space. Asteroids cont
 Nebulae are massive coloured clouds of plasma, covering several star systems. Depending on the nebula type, ships within nebulae may experience various adverse effects, but will not be directly damaged.
 Gaseous resources can be harvested from Nebulae using a Gas Harvester.
 
+Space Stations within Nebulae can also accumulate resources passively from them using an Ambient Gas Extractor.
+
 ### Gas Planets
 
 Gas Planets, a.k.a. Gas Giants, are massive planets with turbulent atmospheres and no reachable solid surface. Gaseous and sometimes exotic resources can be harvested from the proximity of Gas Giants using a Gas Harvester.
 Hot Gas Giants are so extremely hot that their atmospheres contain vaporized forms of solid resources, which can also be harvested the same way.
+
 Space Stations in/adjacent to Gas Planet sectors can also accumulate resources passively from some Gas Giants using an Ambient Gas Extractor.
 
 ### Terrestrial Planets
