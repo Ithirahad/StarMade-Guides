@@ -40,11 +40,7 @@ The conduit chain can be any length and can route around other blocks — it jus
 
 ## Chamber Capacity
 
-Each reactor has a **chamber capacity budget** that grows with both the number of reactor blocks and the reactor level. Each chamber you install costs a portion of that budget. You cannot exceed 100% capacity.
-
-- **More reactor blocks** → higher reactor level → more capacity available
-- Each chamber type has a fixed capacity cost
-- You can install multiple different chambers as long as the total stays within budget
+Each reactor has a **chamber capacity budget** that remains fixed, regardless of the size of the reactor. Each chamber you install costs a portion of that budget. You cannot exceed 100% capacity.
 
 Monitor your capacity usage in the ship stats panel.
 
@@ -52,28 +48,16 @@ Monitor your capacity usage in the ship stats panel.
 
 | Chamber | Effect |
 |---------|--------|
-| **Mobility** | Increases ship movement speed and agility |
-| **Jump** | Enables the jump drive system (see below) |
-| **Stealth** | Enables cloaking / stealth mode |
-| **Scanner** | Enhances scan range and detection ability |
+| **Mobility** | Upgrades ship movement speed and agility |
+| **Jump** | Upgrades a ship's Jump Drive system |
+| **Stealth** | Enhances a ship's Stealth system functionality, such as allowing full invisibility or longer stealth durations |
+| **Recon** | Enhances scan range and detection ability |
 | **Logistics** | Improves cargo and logistics handling |
 
-## Jump Chamber Upgrades
-
-The Jump chamber has a **tiered upgrade path**. Each tier extends jump range and must be built on top of the previous one:
-
-| Tier | Upgrade |
-|------|---------|
-| 0 | Base jump capability |
-| 1 | Extended range |
-| 2 | Further range |
-| 3 | Maximum range |
-
-Higher jump tiers cost more capacity and require a higher reactor level to unlock.
 
 ## Installing a Chamber
 
-1. In build mode, place one or more **Reactor Conduit** blocks forming a path from a Reactor Block outward.
+1. In build mode, place one or more **Reactor Conduit** blocks forming a path from a Reactor Block or parent Chamber outward.
 2. Place the **Chamber Block** at the end of the conduit path (touching the last conduit).
 3. The chamber activates automatically when the connection is valid.
 
