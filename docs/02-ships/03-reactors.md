@@ -17,9 +17,9 @@ Every ship needs a power reactor to run its systems. This guide covers how to bu
 
 ## Reactor Level
 
-Reactor level scales logarithmically with the number of reactor blocks. A small ship with a handful of reactor blocks will be level 0 or 1; a large capital ship can reach much higher levels.
+Reactor level scales with the size of your Reactor. A small ship with a handful of reactor blocks will be level 0 or 1; a large capital ship can reach levels in the thousands or more.
 
-Level matters primarily because it determines how many chamber modules are required to activate chambers. (see [Chambers](04-chambers.md)).
+Reactor Level matters primarily because it determines how many chamber modules are required to activate chambers. (see [Chambers](04-chambers.md)). However, it is also a stat visible in the HUD when selecting a ship, and players may quickly estimate the capabilities of a potential adversary ship by the level of its reactor.
 
 ## How Much to Build
 
