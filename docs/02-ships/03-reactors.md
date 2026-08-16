@@ -6,16 +6,14 @@ Every ship needs a power reactor to run its systems. This guide covers how to bu
 
 | Block | Role |
 |-------|------|
-| **Reactor Block** | Generates power. More blocks = more power capacity and higher reactor level. |
-| **Reactor Stabilizer** | Increases stabilization, unlocking the reactor's full output. |
+| **Reactor Power** | Generates power. More blocks = more power capacity and higher reactor level. |
+| **Reactor Stabilizer** | Increases stabilization, raising the amount of damage a reactor can take before overheating. |
 | **Reactor Conduit** | Connects chambers to the reactor (see [Chambers](04-chambers.md)). |
 
 ## Power and Stabilization
 
-Your reactor's effective power output is determined by two things: the number of **Reactor Blocks** and the **stabilization percentage** provided by your **Reactor Stabilizers**.
-
-- **Reactor Blocks** set the maximum possible power and the reactor's **level** (more blocks = higher level).
-- **Stabilizers** unlock the reactor's full output. Below 100% stabilization your ship has power generation reduced. Stabilizers can be placed anywhere on the ship — position and orientation do not matter.
+- Your reactor's power output is determined by the amount of **Reactor Power** blocks it contains. Reactor Power blocks for one Reactor must all be in one contiguous group. Any separate groups of Reactor Power, which do not directly contact the main reactor group, will become additional reactors. Only one reactor can operate at any given time.
+- Your reactor's resilience against damage is determined by the amount of **Reactor Stabilizer** blocks on your ship. Reactor Stabilizers increase the reactor damage threshold after which the reactor overheats and is rendered inoperable. A completely unstabilized reactor will be disabled by only a few of its blocks being destroyed, whereas a fully stabilized reactor (one where the count of stabilizers matches the count of reactors) can lose large chunks of its blockcount and continue to function. The trade-off is that Stabilizers will weigh down your ship, so mobility-focused ship designs may benefit from operating with less than 100% stabilization.
 
 ## Reactor Level
 
@@ -25,9 +23,7 @@ Level matters primarily because it determines how many chamber modules are requi
 
 ## How Much to Build
 
-Only the first 10 **Reactor Power** modules do not require stabilization. After the first 10 modules, a balanced reactor has **equal numbers** of Reactor Power and Reactor Stabilizers, which achieves 100% stabilization. You can monitor your stabilization percentage in the ship's stats panel.
-
-> **Tip:** Always aim for 100% stabilization. Non-stabilized Power Reactor blocks will not provide any energy!  
+Only the first 10 **Reactor Power** modules will have 100% stabilization without any external Stabilizers. After the first 10 modules, a balanced reactor has **equal numbers** of Reactor Power and Reactor Stabilizers, in order to reach 100% stabilization. You can monitor your stabilization percentage in the ship's stats panel.
 
 ```svg
 <svg width="640" height="330" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
@@ -65,7 +61,7 @@ Only the first 10 **Reactor Power** modules do not require stabilization. After 
   <text x="476" y="264" fill="#5cb87a" font-size="13" font-weight="bold">&#10003;</text>
 
   <text x="30" y="296" fill="#aebccd" font-size="13">First 10 reactor blocks need no stabilizers. After that, add</text>
-  <text x="30" y="314" fill="#aebccd" font-size="13"><tspan fill="#e8eef7" font-weight="bold">1 stabilizer per reactor block</tspan>&#160;to reach 100% — unstabilized blocks make no energy.</text>
+  <text x="30" y="314" fill="#aebccd" font-size="13"><tspan fill="#e8eef7" font-weight="bold">1 stabilizer per reactor block</tspan>&#160;to reach 100%.</text>
 </svg>
 ```
 
