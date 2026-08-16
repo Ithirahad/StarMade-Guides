@@ -13,17 +13,17 @@ Every ship needs a power reactor to run its systems. This guide covers how to bu
 ## Power and Stabilization
 
 - Your reactor's power output is determined by the amount of **Reactor Power** blocks it contains. Reactor Power blocks for one Reactor must all be in one contiguous group. Any separate groups of Reactor Power, which do not directly contact the main reactor group, will become additional reactors. Only one reactor can operate at any given time.
-- Your reactor's resilience against damage is determined by the amount of **Reactor Stabilizer** blocks on your ship. Reactor Stabilizers increase the reactor damage threshold after which the reactor overheats and is rendered inoperable. A completely unstabilized reactor will be disabled by only a few of its blocks being destroyed, whereas a fully stabilized reactor (one where the count of stabilizers matches the count of reactors) can lose large chunks of its blockcount and continue to function. The trade-off is that Stabilizers will weigh down your ship, so mobility-focused ship designs may benefit from operating with less than 100% stabilization.
+- Your reactor's resilience against damage is determined by the amount of **Reactor Stabilizer** blocks on your ship. Reactor Stabilizers increase the reactor damage threshold after which the reactor overheats and is rendered inoperable. A completely unstabilized reactor will be disabled by only a few of its blocks being destroyed, whereas a fully stabilized reactor (one where the count of stabilizers matches the count of reactors) can lose large chunks of its constituent blocks and continue to function. The trade-off is that Stabilizers will weigh down your ship, so mobility-focused ship designs may benefit from operating with less than 100% stabilization.
 
 ## Reactor Level
 
 Reactor level scales with the size of your Reactor. A small ship with a handful of reactor blocks will be level 0 or 1; a large capital ship can reach levels in the thousands or more.
 
-Reactor Level matters primarily because it determines how many chamber modules are required to activate chambers. (see [Chambers](04-chambers.md)). However, it is also a stat visible in the HUD when selecting a ship, and players may quickly estimate the capabilities of a potential adversary ship by the level of its reactor.
+Reactor Level matters primarily because it determines how many chamber modules are required to activate chambers. (see [Chambers](04-chambers.md)). However, it is also a stat visible in the flight HUD when selecting a ship (default `F`), and players may quickly estimate the capabilities of a potential adversary ship by the level of its reactor.
 
 ## How Much to Build
 
-Only the first 10 **Reactor Power** modules will have 100% stabilization without any external Stabilizers. After the first 10 modules, a balanced reactor has **equal numbers** of Reactor Power and Reactor Stabilizers, in order to reach 100% stabilization. You can monitor your stabilization percentage in the ship's stats panel.
+Only the first 10 **Reactor Power** modules will operate at 100% stabilization without any external Stabilizers. After the first 10 modules, a balanced reactor has **equal numbers** of Reactor Power and Reactor Stabilizers, in order to reach 100% stabilization. You can monitor your stabilization percentage in the ship's stats panel.
 
 ```svg
 <svg width="640" height="330" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
