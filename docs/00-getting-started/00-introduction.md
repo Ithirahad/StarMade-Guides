@@ -4,7 +4,7 @@ StarMade is a voxel-based space sandbox game. You explore a procedurally generat
 
 ## The Universe at a Glance
 
-The universe is divided into [Sectors](../03-world/00-navigation.md#sectors) and [Systems](../03-world/00-navigation.md#systems). Pirates and other [NPC Factions](../07-multiplayer/00-factions.md) appear ad hoc across the galaxy map. Planets and [asteroids](../03-world/02-asteroids.md) gather around star systems, asteroid belts vary in resouces based on their distance from stars.
+The universe is divided into [Sectors](../03-world/00-navigation.md#sectors) and [Systems](../03-world/00-navigation.md#systems). Pirates and other [NPC Factions](../07-multiplayer/00-factions.md) appear across the galaxy map. Planets and [asteroids](../03-world/02-asteroids.md) gather around stars, and asteroid belts vary in resources based on their distance from their star.
 
 ## Core Gameplay Loop
 
@@ -17,14 +17,14 @@ The universe is divided into [Sectors](../03-world/00-navigation.md#sectors) and
 ## Game Modes
 
 ### Singleplayer
-You host your own universe. All admin commands are available. Blueprints are saved to your local `StarMade/blueprints/` folder.
+You host your own universe. All admin commands are available. Blueprints are saved to the `blueprints/` folder of your StarMade install.
 
 ### Multiplayer
 You connect to a shared server. Server rules govern admin commands and what you can build. Blueprints saved to a server are stored server-side.
 
 ## First Steps
 
-When you first spawn, you will be in **astronaut mode** — a floating humanoid character. The spawn location is configured by the server; on a default setup you will start in a sector where you can find a **trading station** to buy basic supplies.
+When you first spawn, you will be in **astronaut mode** — a floating humanoid character. The spawn location is configured by the server; by default it is sector **2, 2, 2**, home to a Trading Guild **Trade Station** where you can buy basic supplies.
 
 Your immediate goals:
 
