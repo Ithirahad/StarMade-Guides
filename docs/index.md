@@ -8,7 +8,7 @@ Browse the navigation on the left to find guides on various topics. Topics are b
 
 ## Downloading StarMade
 
-While the Steam version of Starmade costs money currently, the **Demo** version on Steam is identical to the official release. You can also download the game for free off of the [official website](https://www.star-made.org/download/). If you wish to support StarMade you may wish to consider supporting the development of the new [StarMade Galaxy](00-getting-started/04-starmade-galaxy.md) rewrite.
+While the Steam version of Starmade costs money currently, the **Demo** version on Steam is identical to the official release. You can also download the game for free off of the [official website](https://www.star-made.org/download/). If you wish to support StarMade you may wish to consider supporting the development of the new [StarMade Galaxy](starmade-galaxy.md) rewrite.
 
 ### Launcher Versions
 

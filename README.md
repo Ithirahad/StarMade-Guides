@@ -19,3 +19,16 @@ The in-game renderer supports most markdown features (tables, images, etc.), as 
 <svg ...>...</svg>
 ```
 ````
+Other guide-only syntax, supported both in game and on the website:
+
+- **3D block scene:** a ` ```scene ` fence with the world-test block JSON (see `docs/02-ships/03-reactors.md`). On the web, blocks use the game's textures from `docs/assets/blocks/`, exported by `scripts/export_guide_textures.py` in the game repo (re-run it when block textures change); mod blocks are drawn as coloured cubes.
+- **Block icon:** `![block:Reactor Power]` or `![block:1008]`, on its own line or in a table cell. The web shows the block's name.
+- **Image alignment:** `![alt](image.png){align=right}` (no space before the `{`).
+- **Caption** below an image or diagram:
+  ```
+  /// caption
+  Text of the caption.
+  ///
+  ```
+
+Image paths are relative to the guide's own folder, e.g. `../assets/map.png`. Keep `.md` files out of `docs/assets/` and `docs/javascripts/`: any folder with a `.md` file in it shows up as a section in the in-game guides.
