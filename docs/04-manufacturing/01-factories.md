@@ -12,7 +12,7 @@ Production or 'crafting' in StarMade is primarily achieved via various types of 
 - Component Fabricator: Produces any Component from Capsules/Mesh/Composite.
 - Block Assembler: Creates blocks from Components.
 - Chemical Factory: Produces Catalysts from ultra rare resources for enhanced refining in the Catalytic Capsule Refinery. (In future versions of StarMade, the Chemical Factory will also produce other intermediate products for efficient specialized refining and Component production.)
-- Shipyard: Produces Ships according to provided blueprints, or allows you to create new designs without spending blocks.
+- Shipyard: Produces Ships matching provided blueprints or existing ships, or allows you to create new designs without spending blocks and produce ships from those designs later.
 
 ### Reclamation Factories
 - Block Recycler: Reclaims the constituent Components from any Block placed inside it.
