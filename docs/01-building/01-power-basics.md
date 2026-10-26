@@ -1,6 +1,7 @@
 # Power Basics
 
-Shipcores themselves can fly around and produce enough power for a very small ship, however if your ship gets to be a decent size you will need to create reactors to generate power for your onboard systems.
+Ship Cores can fly around autonomously, at limited speeds, without any source of power.
+However, in order to build a ship that can properly travel, mine, fight, or serve any other purpose, you will need to create **Reactors** to generate power for your onboard systems.
 
 ## Reactor Power and Reactor Stabilizer Blocks
 
@@ -10,13 +11,13 @@ Shipcores themselves can fly around and produce enough power for a very small sh
 
 The yellow highlighted reactor is inactive and the purple highlighted reactor is active.
 
-The more reactor blocks in a reactor, the more energy it produces. However, **any reactor over 10 blocks will start to lose power generation per block as it becomes unstable.**
+The more reactor blocks in a reactor, the more energy it produces. However, **any reactor over 10 blocks, alone, will start to lose stability as it gets larger.**
 
 ![reactors_fig2.png](https://images.steamusercontent.com/ugc/2279448944260652351/C41D8B67389E35E2A920EECF9E032706DE7FD11C/)
 
 ![reactors_fig3.png](https://images.steamusercontent.com/ugc/2279448944260655389/2F38740FD01AAA2422740A6BA697ED25D892C440/)
 
-Despite adding more reactors, our reactor isn't gaining any power generation!
+The lower the reactor's stability, the fewer blocks must be broken before it overheats and your ship becomes inoperable! In a universe with hostile pirates and hazards such as stellar heat, this means you could lose your ship very easily.
 
 How do you fix this? With **Stabilizers**.
 
@@ -37,7 +38,7 @@ The same stabilizers can provide the stabilization for every individual reactor 
 
 This secondary reactor gets stabilized along with the main reactor.
 
-These basic rules scale for a reactor of any size, from 100 blocks to 1,000,000 blocks or more. **You will always need an equal number of reactor blocks and stabilizers past the first 10.**
+These basic rules scale for a reactor of any size, from 100 blocks to 1,000,000 blocks or more. In order to achieve maximal reactor stability, **you will always need an equal number of reactor blocks and stabilizers past the first 10.**
 
 **There is no special shape or rules for how reactor blocks should touch.** They just need to be in the same group. Shape-based reactor power bonuses were part of Power 1.0 and have been removed with the 2.0 updates.
 
