@@ -39,6 +39,14 @@ Use the filter checkboxes to show or hide:
 
 Click any entry in the navigation list to **select** it. A selection indicator appears on your HUD pointing toward the selected object, making it easy to fly to it without having to spot it visually.
 
+## The Astro Scanner
+
+Astro Scanners are a ship system that provides information about a Star System.
+Similar to a weapon or utility beam, it consists of two block types: an **Astro Scanner Computer** that controls the system, and **Astro Scanner Antenna** blocks linked to the computer.
+
+Once an Astro Scanner is placed and added to your ship's hotbar, it can be used to scan whichever Star System your ship is currently in. It will reveal the locations of all planets and stations in that system on the Map screen, and also provide a report containing the names, locations, and factions of active ships found within its detection range. This report is viewable via the second tab of your Navigation Panel.
+Depending on which Reactor Chambers are installed on your ship, scanner reports also provide other information, such as what useful resources are available in the system.
+
 ## Waypoints
 
 To navigate to a specific sector coordinate:
