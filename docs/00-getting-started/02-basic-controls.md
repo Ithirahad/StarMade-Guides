@@ -68,6 +68,8 @@ See [Character Movement](03-character-movement.md) for more on moving around.
 | Switch to build mode | `Z` |
 | Exit ship | `R` |
 | Turret AI on / off | `,` |
+| Reset turret rotations | `.` |
+| Pin your selected target for the AI | `X` |
 
 ## Ship — Build Mode
 

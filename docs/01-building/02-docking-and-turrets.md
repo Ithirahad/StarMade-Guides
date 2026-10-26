@@ -54,15 +54,20 @@ A turret is built from docked entities on **Rail Turret Axis** blocks. One axis 
   "blocks": [ { "from": [-3,0,-3], "to": [3,0,3], "block": "GREY_HULL" } ],
   "steps": [
     { "text": "Place a Rail Turret Axis on the host ship, arrow face up.",
-      "blocks": [ { "at": [0,1,0], "block": "RAIL_TURRET_AXIS", "orient": 8 } ] },
+      "blocks": [ { "at": [0,1,0], "block": "RAIL_TURRET_AXIS", "orient": 12 } ] },
     { "text": "Dock the turret base to it with a Rail Docker facing down. The base turns left and right (yaw).",
-      "blocks": [ { "at": [0,2,0], "block": "RAIL_DOCKER", "orient": 12 },
+      "blocks": [ { "at": [0,2,0], "block": "RAIL_DOCKER", "orient": 8 },
                   { "from": [-1,3,-1], "to": [1,4,1], "block": "DARK_GREY_HULL" } ] },
     { "text": "Put a second Rail Turret Axis on the side of the base, and dock the barrel to it with a docker facing sideways. The barrel tilts up and down (pitch).",
-      "blocks": [ { "at": [2,4,0], "block": "RAIL_TURRET_AXIS", "orient": 16 },
-                  { "at": [3,4,0], "block": "RAIL_DOCKER", "orient": 20 },
+      "blocks": [ { "at": [2,4,0], "block": "RAIL_TURRET_AXIS", "orient": 20 },
+                  { "at": [3,4,0], "block": "RAIL_DOCKER", "orient": 16 },
                   { "from": [4,4,-1], "to": [4,4,1], "block": "DARK_GREY_HULL" },
-                  { "from": [4,4,-5], "to": [4,4,-2], "block": "CANNON_BARREL" } ] } ] }
+                  { "from": [4,4,-5], "to": [4,4,-2], "block": "CANNON_BARREL" } ] },
+    { "text": "On the back of the barrel: a Cannon Computer linked to the barrels, a BOBBY AI Module so the turret aims by itself, and a Faction Module.",
+      "blocks": [ { "at": [4,4,1], "block": "CANNON_COMPUTER" },
+                  { "from": [4,4,-5], "to": [4,4,-2], "block": "CANNON_BARREL", "controller": [4,4,1] },
+                  { "at": [4,4,2], "block": "BOBBY_AI_MODULE" },
+                  { "at": [4,4,3], "block": "FACTION_MODULE" } ] } ] }
 ```
 
 - A docker facing **up or down** on its entity turns around the vertical axis (yaw); a docker facing **sideways** tilts (pitch).
@@ -73,22 +78,9 @@ A turret is built from docked entities on **Rail Turret Axis** blocks. One axis 
 
 ### Turret AI
 
-1. Place a **BOBBY AI Module** on the turret's barrel entity (the one on the last axis).
-2. Press `R` on it, or open the AI menu with `;` while in the turret, and tick **Active**. A turret on the last axis is set to the **Turret** type automatically.
-3. Choose what it should **aim at**, in priority order: Selected Target, Ships, Stations, Missiles, Astronauts, Asteroids. **Selected Target** is whatever the host ship's pilot has selected with `F`.
+Put a **BOBBY AI Module** on the barrel (the entity on the last axis) and tick **Active**; it is set to the Turret type automatically. Turrets use the host's faction, so they don't need a Faction Module. From the host, `,` turns docked AI on and off and `.` resets turret rotation.
 
-You don't need a Faction Module: a docked turret without a faction uses its host's faction to tell friend from foe.
-
-The AI menu also sets the targeting **priority** (closest, weakest, strongest, lowest shields and more), minimum and maximum range, and whether to keep a target until it is lost.
-
-From the host ship:
-
-| Action | How |
-|--------|-----|
-| Turret AI on / off | `,` while flying, or **Turrets On / Off** in the structure panel's Docks section |
-| Reset turrets to their starting rotation | `.` while flying, or **Reset Turrets** |
-
-> Entering a turret's core turns its AI off. Turn it back on when you leave.
+See [Ship & Turret AI](../02-ships/10-ship-ai.md) for targeting, remote control and the rest of the AI settings.
 
 ## Shared Power and Shields
 
