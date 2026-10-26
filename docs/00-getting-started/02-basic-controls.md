@@ -93,5 +93,3 @@ In zero-G all the same movement keys apply, plus:
 | Select module for connection | `C` |
 | Connect to selected module | `V` |
 
-## Quick Reference Card
-
