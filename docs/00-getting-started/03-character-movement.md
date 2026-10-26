@@ -39,7 +39,7 @@ When you are floating near a ship or station you can **align** yourself to it by
 
 This is very useful for:
 - Moving around inside a piloted or AI-controlled ship without getting bashed into walls or left behind entirely when it moves
-- Fitting through small doors that may only accommodate a character facing the right direction
+- Fitting through small doors, hallways, and vertical shafts which may only accommodate a character facing the right direction
 - Placing blocks with the proper orientation as an astronaut (the build preview [`CTRL`] updates its orientation with your alignment)
 
 To break the alignment, simply fly away from the structure or enter a different gravity field.
