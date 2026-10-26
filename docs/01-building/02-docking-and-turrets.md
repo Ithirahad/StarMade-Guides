@@ -1,112 +1,110 @@
 # Docking & Turrets
 
-StarMade uses a **rail-based docking system**. A ship docks to rail blocks on a station or another ship with a **Rail Docker** block. Rails handle fixed docking, turrets, moving platforms and elevators, cargo transfer, and automatic hangar docking.
+StarMade uses a **rail-based docking system**. Ships dock to rail blocks on stations or other ships using a **Rail Docker** block. This system handles rigid docking, rotating turrets, moving platforms, automated cargo transfer, and carrier hangar docking.
 
 ## Rail Blocks
 
 | Block | Role |
 |-------|------|
-| **Rail Docker** | Goes on the ship being docked; the connector end |
-| **Rail Basic** | Standard rail on the host. Docked ships move along it in the direction of its arrow |
-| **Rail Turret Axis** | Lets the docked entity rotate around one axis; chain two for a full turret |
-| **Rail Rotator Clock Wise / Counter Clock Wise** | Turns a docked entity as it passes over |
-| **Rail Mass Enhancer** | Raises how much docked mass the host can move at full speed |
-| **Rail Speed Controller** | Sets how fast rails and rotators move |
-| **Rail Load / Rail Unload** | Moves items between a docked ship's storage and the host's |
-| **Pickup Point** | Docks ships automatically when they come close |
-| **Pickup Rail** | A rail meant to sit next to a Pickup Point |
-| **Shootout Rail** | Undocks anything that moves onto it, launching it at 5× rail speed |
+| **Rail Docker** | Placed on the ship being docked; the connector end |
+| **Rail Basic** | Standard docking/track rail placed on the host structure |
+| **Rail Turret Axis** | Lets a docked ship rotate along one axis; chain two for full 360° |
+| **Rail Rotator (CW / CCW)** | Moves a docked ship in a circular path |
+| **Rail Mass Enhancer** | Increases the mass a rail can support |
+| **Rail Speed Controller** | Controls movement speed along a rail |
+| **Rail Load / Rail Unload** | Transfers cargo between a docked ship and connected storage |
+| **Pickup Rail + Pickup Point** | Automatically docks ships that fly into the detection area |
 
 ## Docking a Ship
 
-1. Place a **Rail Docker** on your ship.
-2. Each Rail Docker shows up as a **Rail Docker** entry in your Weapons panel. Put it on your hotbar.
-3. Fly within **100 m** of a rail on the host, aim at the rail and **fire** with that slot selected.
+1. Place a **Rail Docker** on your ship. The **arrow** on its top face points toward the docking direction — it must align with the arrow on the target rail block.
+2. Equip the **Rail Docking Beam** in a weapon slot via the weapons panel.
+3. Fly your ship close to a **Rail Basic** (or other dockable rail) on the host structure.
+4. Aim at the rail block and **fire** to connect.
 
-You don't have to line anything up: the docker's arrow face snaps onto the rail's arrow face like a magnet, and your ship ends up one block out from the rail.
-
-- Only ships can dock (not stations), and the host must be neutral, your faction, public, or a faction you are in.
-- After a dock attempt or undocking there is a 5 second cooldown.
-- **Create Docking** in the advanced build mode panel builds a new docked entity right on a rail. See [Advanced Building](00-advanced-building.md#docking).
-
-## Undocking
-
-Once docked, the Rail Docker entry on your hotbar is replaced by **Undock**. Fire with it selected to undock.
-
-You can also undock from the host:
-
-- The **Docks** section of the structure panel has **Undock All**, **Turrets** and **Normal** buttons.
-- Sending a logic signal to a docked ship's Rail Docker undocks it.
-- A **Shootout Rail** at the end of a track launches ships off it.
+> **Tip:** The Rail Docker's arrow must face toward the target block. Use the orientation tool (`Left Alt` → Orientation) to adjust it.
 
 ## Mass Limits
 
-There is no hard size or mass limit for docking. Instead, each structure can move **50 mass** of docked entities at full speed, plus **50 for every Rail Mass Enhancer** on it. Enhancers can go anywhere on the host; they don't need linking, but each uses some reactor power.
+Each rail block supports **50 mass** by default. Add **Rail Mass Enhancer** blocks connected to the rail on the host structure to raise the limit — each enhancer adds 50 mass capacity at a small power cost per tick.
 
-For every unit of mass over that limit, rails, rotators and AI turret turning slow down by 5%, to a minimum of 5% speed.
+## Undocking
+
+To undock, pilot the docked ship and fire the docking beam at open space (not aimed at a rail), or release it remotely via the **Structure Panel** (`Delete`) on the host ship.
 
 ## Turrets
 
-A turret is built from docked entities on **Rail Turret Axis** blocks. One axis only rotates around one axis, so a full turret uses two:
+A turret is a docked ship that rotates automatically to track and fire at enemies. Use a **Rail Turret Axis** on the host structure instead of a Rail Basic. A single axis allows rotation on one plane; **chain two Rail Turret Axes** (one on the host, one on an intermediate bracket docked to the first) for full pitch + yaw freedom.
 
-```scene
-{ "height": 300,
-  "blocks": [ { "from": [-3,0,-3], "to": [3,0,3], "block": "GREY_HULL" } ],
-  "steps": [
-    { "text": "Place a Rail Turret Axis on the host ship, arrow face up.",
-      "blocks": [ { "at": [0,1,0], "block": "RAIL_TURRET_AXIS", "orient": 12 } ] },
-    { "text": "Dock the turret base to it with a Rail Docker facing down. The base turns left and right (yaw).",
-      "blocks": [ { "at": [0,2,0], "block": "RAIL_DOCKER", "orient": 8 },
-                  { "from": [-1,3,-1], "to": [1,4,1], "block": "DARK_GREY_HULL" } ] },
-    { "text": "Put a second Rail Turret Axis on the side of the base, and dock the barrel to it with a docker facing sideways. The barrel tilts up and down (pitch).",
-      "blocks": [ { "at": [2,4,0], "block": "RAIL_TURRET_AXIS", "orient": 20 },
-                  { "at": [3,4,0], "block": "RAIL_DOCKER", "orient": 16 },
-                  { "from": [4,4,-1], "to": [4,4,1], "block": "DARK_GREY_HULL" },
-                  { "from": [4,4,-5], "to": [4,4,-2], "block": "CANNON_BARREL" } ] },
-    { "text": "On the back of the barrel: a Cannon Computer linked to the barrels, a BOBBY AI Module so the turret aims by itself, and a Faction Module.",
-      "blocks": [ { "at": [4,4,1], "block": "CANNON_COMPUTER" },
-                  { "from": [4,4,-5], "to": [4,4,-2], "block": "CANNON_BARREL", "controller": [4,4,1] },
-                  { "at": [4,4,2], "block": "BOBBY_AI_MODULE" },
-                  { "at": [4,4,3], "block": "FACTION_MODULE" } ] } ] }
+```svg
+<svg width="640" height="330" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect x="1" y="1" width="638" height="328" rx="12" fill="#121821" stroke="#2c3b50" stroke-width="2"/>
+  <text x="320" y="36" text-anchor="middle" fill="#e8eef7" font-size="22" font-weight="bold">Two-Axis Turret</text>
+
+  <rect x="40" y="270" width="560" height="34" rx="6" fill="#1b232f" stroke="#33445a"/>
+  <text x="320" y="292" text-anchor="middle" fill="#7e8da0" font-size="12" font-style="italic">host ship / station surface</text>
+
+  <rect x="244" y="236" width="60" height="34" rx="5" fill="#3f6f9c" stroke="#274a6b" stroke-width="2"/>
+  <text x="316" y="258" fill="#8fb6e0" font-size="12" font-weight="bold">Rail Turret Axis 1 (yaw)</text>
+  <path d="M210 236 A60 22 0 0 1 338 236" fill="none" stroke="#5cb87a" stroke-width="2" stroke-dasharray="4 3"/>
+  <polygon points="338,236 326,228 330,242" fill="#5cb87a"/>
+
+  <rect x="232" y="176" width="84" height="60" rx="6" fill="#2a313b" stroke="#c3ccd8" stroke-width="2"/>
+  <text x="274" y="210" text-anchor="middle" fill="#aab7c6" font-size="12">base</text>
+
+  <rect x="316" y="186" width="34" height="40" rx="5" fill="#3f6f9c" stroke="#274a6b" stroke-width="2"/>
+  <text x="358" y="210" fill="#8fb6e0" font-size="12" font-weight="bold">Axis 2 (pitch)</text>
+
+  <rect x="333" y="176" width="150" height="20" rx="5" fill="#4f8fd0" stroke="#274a6b" stroke-width="2" transform="rotate(-24 333 186)"/>
+  <text x="452" y="118" fill="#8fb6e0" font-size="12" font-weight="bold">barrel</text>
+  <path d="M388 168 A48 48 0 0 1 420 132" fill="none" stroke="#5cb87a" stroke-width="2" stroke-dasharray="4 3"/>
+  <polygon points="420,132 408,135 416,144" fill="#5cb87a"/>
+
+  <rect x="262" y="244" width="24" height="24" rx="3" fill="#e09a3e" stroke="#7a531c" stroke-width="2"/>
+  <line x1="274" y1="256" x2="150" y2="256" stroke="#e09a3e" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="46" y="252" fill="#e0b57a" font-size="12" font-weight="bold">Ship core</text>
+  <text x="46" y="268" fill="#8e9bac" font-size="11">at the bottom</text>
+
+  <text x="320" y="322" text-anchor="middle" fill="#8e9bac" font-size="13">Chain two Rail Turret Axes for full yaw + pitch tracking. Nothing below the core.</text>
+</svg>
 ```
 
-- A docker facing **up or down** on its entity turns around the vertical axis (yaw); a docker facing **sideways** tilts (pitch).
-- The turret pivots on the docker, not the ship core, so the core can go anywhere on the turret.
-- The barrel (the last entity in the chain) does the aiming and turns the base with it.
-- Turrets can't rotate into blocks around them, so leave them room to turn.
-- Heavier turrets turn slower under AI control.
+### Turret Design Rules
 
-### Turret AI
+- The **ship core must be at the bottom** of the turret structure. Nothing may be built below the core.
+- Orient the Rail Docker's arrow to face the Rail Turret Axis arrow.
+- The turret rotates around the docking point, so core position determines the pivot.
 
-Put a **BOBBY AI Module** on the barrel (the entity on the last axis) and tick **Active**; it is set to the Turret type automatically. Turrets use the host's faction, so they don't need a Faction Module. From the host, `,` turns docked AI on and off and `.` resets turret rotation.
+### Enabling AI on a Turret
 
-See [Ship & Turret AI](../02-ships/10-ship-ai.md) for targeting, remote control and the rest of the AI settings.
+1. Place an **AI Module** on the turret.
+2. Press `R` on the AI module and set the mode to **Turret**.
+3. Place a **Faction Module** on the turret and register it to your faction (press `R`, enter your faction signature). The AI uses this to identify enemies.
+4. Enable the AI by ticking **Activate** in the AI module panel, **or** do it remotely from the Structure Panel (`Delete`) of the host ship.
 
-## Shared Power and Shields
+### AI Targeting Modes
 
-- Docked entities run on the **reactor of the root ship**, so turrets don't need their own reactor.
-- While the host's shields are above 25%, they also take hits aimed at its docked entities.
+| Mode | Behaviour |
+|------|-----------|
+| Aim at Any | Attacks any enemy entity in range |
+| Aim at Selected Target | Attacks the entity targeted by the host ship's pilot (`F` to select) |
 
-## Automatic Docking (Pickup Points)
+> Entering the turret's core **disables the AI**. Exit before re-enabling it.
 
-For carrier hangars, place a **Pickup Point** next to a rail (usually a **Pickup Rail**):
+## Automatic Docking (Pickup System)
 
-- An unpiloted ship whose Rail Docker comes within 3 m of an active Pickup Point docks to the rail next to it. Your own ship does too while you fly it.
-- The Pickup Point can be turned on and off with logic.
-- A docked ship remembers the Pickup Point it used. The **Carrier Recall** fleet order sends fleet ships back to their pickup points on the flagship.
+For carrier hangars, use the **Pickup Rail + Pickup Point** pair on the host:
+
+- **Pickup Point** projects a detection sphere; any ship with a Rail Docker that enters this area docks automatically.
+- **Pickup Rail** is the block the ship actually docks to.
+
+The docked ship remembers this pickup rail and can be recalled to it automatically. This is the recommended approach for fighter bays and carrier designs — no manual beam aiming required.
 
 ## Moving Rails
 
-Ships docked to a **Rail Basic** move along the track by themselves, in the direction of the rail arrows, until the track ends. Use this for elevators, launch tubes and sliding doors.
+Rail blocks can also carry ships along a track rather than simply holding them:
 
-- **Rail Rotator Clock Wise / Counter Clock Wise**: with nothing linked, it turns the docked entity 90° as it arrives. Link Activation Modules to it to set the angle: each active one adds 45°, and 9 or more make it turn non-stop. Link a Display Module with a number (0–360) to set an exact angle.
-- **Rail Speed Controller**: link it to rails and rotators (`C`/`V`; `Shift+V` adds all touching rails), then link Activation Modules to it. Speed is the share of those modules that are on: 5 on and 5 off means 50% speed, and all off stops the track. Rails without a controller run at 50%.
+- **Rail Rotator (CW/CCW)** — rotates a docked entity in a circle.
+- **Rail Speed Controller** — connected to rail blocks via `C`/`V`; the ratio of active to inactive blocks sets the movement speed (e.g. 5 active + 5 inactive = 50% speed).
 
-## Cargo Rails
-
-Link the ship's Rail Docker to Storage blocks on the ship, and link a **Rail Load** or **Rail Unload** to Storage on the host:
-
-- **Rail Load** moves items from the host's storage into the docked ship's storage.
-- **Rail Unload** moves items from the docked ship to the host.
-
-Storage filters still apply.
+This enables elevators, rotating weapon platforms, and automated launch/recovery systems.

@@ -6,7 +6,39 @@ StarMade has two distinct AI systems: **ship/turret AI** controlled by the AI Mo
 
 ## Ship & Turret AI
 
-See [Ship & Turret AI](../02-ships/10-ship-ai.md).
+The AI Module block allows a ship or turret to operate autonomously.
+
+### Requirements
+
+- **One AI Module** per ship (only one is allowed — protect it well).
+- Faction membership is strongly recommended so the AI knows who its enemies are. The AI can operate without a faction, but enemy identification is less reliable.
+
+### Setup
+
+1. Place an **AI Module** on the ship in build mode.
+2. Press `R` on the AI module to open its configuration panel.
+3. Set the **mode**: Ship (uses thrusters to manoeuvre) or Turret (does not use thrusters, rotates in place).
+4. Set the **targeting behaviour** (see below).
+5. Tick **Activate** to enable the AI.
+
+> **Warning:** Entering the ship core **disables the AI** instantly. You must re-enable it each time you exit the core.
+
+### Targeting Behaviour
+
+| Setting | Effect |
+|---------|--------|
+| **Aim at Any** | Attacks any enemy entity within range |
+| **Aim at Selected Target** | Targets only the entity selected by the host ship's pilot (turrets only) |
+
+### Remote Activation via Structure Panel
+
+You don't need to walk to the AI module each time. From inside the host ship:
+
+1. Press `Delete` to open the Structure Panel.
+2. Find the docked entity you want to control.
+3. Enable or disable its AI from there.
+
+You can also **toggle all docked entities at once** from the Structure Panel.
 
 ---
 

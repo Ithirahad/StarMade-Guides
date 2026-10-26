@@ -3,12 +3,6 @@ site_description: Guides and documentation for StarMade
 docs_dir: docs
 theme:
   name: readthedocs
-markdown_extensions:
-- attr_list
-- pymdownx.blocks.caption
-extra_javascript:
-- path: javascripts/guides.js
-  type: module
 nav:
 - Home: index.md
 - Getting Started:

@@ -1,169 +1,149 @@
 # Advanced Building
 
-Build mode has a radial menu of shape tools for placing blocks in geometric patterns, and an **advanced build mode** panel full of power tools. Together they dramatically speed up construction of large ships and stations.
-
-## Advanced Build Mode
-
-You must be in **Build Mode** (inside a ship core or build block). Hold `Left Ctrl` to enter advanced build mode; the tool panel appears on the right side of the screen. **Tap `Left Ctrl` twice** to make it stick, and tap it again to leave.
-
-In advanced build mode:
-
-- You aim with the **mouse cursor** instead of the centre of the screen.
-- The mouse wheel **rotates** the selected block.
-- The **build size** sliders apply, so one click can place or remove a whole area of blocks.
-- The middle mouse button puts the block you are pointing at on your hotbar.
-
-> **Speed tip:** Hold `Left Shift` in build mode to move much faster — essential for working on large structures.
+Build mode has a full set of power tools accessible by holding `Left Alt`, as well as a radial menu of shape tools for placing blocks in geometric patterns. These tools dramatically speed up construction of large ships and stations.
 
 ## Build Tools Radial Menu
 
-Press the **backtick key** (`` ` ``) in Build Mode to open the radial menu of eight shape tools. Pick one from the ring, then click in the world to use it.
+Press the **backtick key** (`` ` ``) while in Build Mode to open the radial menu. This gives you access to eight shape-based placement tools. Select a tool from the ring, then click in the world to use it.
 
-How clicks work for every shape tool:
-
-- Normally each click lands on a point **5 blocks in front of your camera**, so you can build out into empty space. Hold `Left Ctrl` to click exactly on the block face under your cursor instead.
-- **Left-click** starts a shape that places blocks; **right-click** starts one that removes them. The first click decides which. Removing needs you to click on actual blocks.
-- A live preview shows the shape: yellow to place, red to remove.
-- Press `Escape` to cancel a shape you have started.
-- A finished shape is one undo step (`Ctrl+Z`).
-- Shapes use your symmetry planes, remove filter and build size, and you need enough blocks in your inventory.
-
-The **centre button** of the radial menu toggles **Hollow Mode**: Box, Circle, Cylinder, Ellipsoid and Polygon are then built as empty shells or outlines instead of solid fills.
+The **center button** of the radial menu toggles **Hollow Mode** — when enabled, shapes are placed as empty shells instead of solid fills. Hollow mode applies to all tools except Single.
 
 ### Single
 
-The default mode. Place or remove one block (or one build-size area) per click.
+The default mode. Place or remove one block (or one build-dimension group) per click.
 
 ### Line
 
-Draw a straight line of blocks.
+Draw a straight line of blocks between two points.
 
 1. Click to set the **start point**.
-2. Click again to set the **end point**. The line is placed.
+2. Click again to set the **end point** — the line fills in.
 
-- **`Left Ctrl` + mouse wheel** cycles axis restriction: Auto, XY plane, XZ plane, YZ plane.
-- **Hold `Left Shift`** to snap to straight lines and 45° diagonals.
+- **Scroll wheel** cycles axis restriction: Auto, XY plane, XZ plane, YZ plane.
+- **Hold Left Shift** to snap to 45-degree angles (cardinals and diagonals).
 
 ### Box
 
-Fill a rectangular volume with blocks.
+Fill a 3D rectangular volume with blocks.
 
 1. Click to set the **first corner**.
-2. Click to set the **opposite corner**. The box is placed.
+2. Click to set the **opposite corner** — the box fills in.
 
-Hollow mode builds only the six walls.
-
-### Curve
-
-Draw a smooth curve.
-
-1. Click to set the **start point**.
-2. Click to set the **end point**.
-3. Click to set the **control point**. The curve bends toward it (it doesn't pass through it).
-
-- **`Left Ctrl` + mouse wheel** cycles axis restriction.
-- **Hold `Left Shift`** to snap angles.
+- **Hold Left Ctrl** for camera-based virtual positioning (build over empty space).
+- Supports hollow mode.
 
 ### Circle
 
 Place a flat circle of blocks.
 
 1. Click to set the **center**.
-2. Click to set the **radius**.
+2. Click to set a point on the **radius**.
 
-- **`Left Ctrl` + mouse wheel** cycles the plane: Auto (facing you), XY, XZ, YZ.
-- **Hold `Left Shift`** to snap the radius to 90° steps.
-- Hollow mode builds a ring instead of a disc.
+- **Scroll wheel** cycles plane lock: Auto, XY, XZ, YZ.
+- **Hold Left Shift** to snap angles.
+- Supports hollow mode (ring).
+
+### Curve
+
+Draw a smooth curved line using three control points.
+
+1. Click to set the **start point**.
+2. Click to set the **end point**.
+3. Click to set the **control point** — the curve fills in between the start and end, bending toward the control point.
+
+- **Scroll wheel** cycles axis restriction.
+- **Hold Left Shift** to snap angles.
 
 ### Cylinder
 
-Build a cylinder.
+Build a 3D cylinder.
 
 1. Click to set the **base center**.
 2. Click to set the **radius**.
-3. Click to set the **height**.
+3. Click to set the **height** — the cylinder fills in.
 
-- While setting the radius, **`Left Ctrl` + mouse wheel** cycles the plane and **`Left Shift`** snaps it.
-- Hollow mode builds an open tube with no ends.
+- **Scroll wheel** cycles plane lock.
+- Supports hollow mode (tube).
 
 ### Ellipsoid
 
-Build a sphere or egg shape that fits inside a box.
+Build a 3D ellipsoid (sphere or egg shape).
 
-1. Click to set the **first corner** of the box.
-2. Click to set the **opposite corner**. The ellipsoid is placed.
+1. Click to set the **first corner** of the bounding box.
+2. Click to set the **opposite corner** — the ellipsoid fills in.
 
-Hollow mode builds a shell one block thick.
+- Supports hollow mode (shell).
 
 ### Polygon
 
-Build a flat shape with 3 to 8 corners.
+Build a custom flat polygon with up to 8 vertices.
 
-1. Before you start, **`Left Ctrl` + mouse wheel** sets how many corners it has (3 by default).
-2. Click to place each corner. The shape is placed as soon as you place the last one.
+1. Click to place each **vertex** (minimum 3, maximum 8).
+2. **Scroll wheel** adjusts target point count.
+3. **Right-click** to finalize with the current points.
 
-Hollow mode builds only the outline.
+- The plane locks after the third point is placed.
+- Supports hollow mode.
 
-> The axis, plane and corner settings reset to their defaults after each shape.
+> All shape tools support **remove mode** (right-click removes instead of places), real-time **preview rendering**, and **undo/redo**.
 
-## Tool Panel
+## Accessing Advanced Build Tools
 
-### General
+You must be in **Build Mode** (inside a ship core or build block). Hold `Left Alt` to reveal the advanced tool panel on the right side of the screen.
 
-- **Orientation:** shows which way the selected block will face. Click it to pick a shape; the mouse wheel rotates the block.
-- **Undo / Redo:** also `Ctrl+Z` / `Ctrl+Y`.
+While holding `Left Alt`:
+- Click with the mouse to place/remove blocks with the current tool active
+- Scroll the mouse wheel to cycle through block orientations (for rotatable blocks)
 
-### Build Size
+> **Speed tip:** Hold `Left Shift` in build mode to move much faster — essential for working on large structures.
 
-Three sliders (X, Y, Z) grow the area you place or remove with a single click. Scroll on a number to change it; right-click to reset it. The server sets the maximum (`PLAYER_MAX_BUILD_AREA` in `server.cfg`, 100 by default).
+## Tool Reference
 
-### Symmetry
+### Remove Mode
 
-Click **XY**, **XZ** or **YZ**, then click a block to put a symmetry plane there. Placing or removing a block on one side does the same on the other side. Use all three planes to build in eight places at once. **Unset** removes a plane.
+Toggles the build box from **yellow** (place) to **red** (remove). Useful for clearing large areas quickly. Works with the area sliders to remove multiple blocks at once.
 
-- **ODD** puts the plane through the middle of a block instead of between blocks — use it for ships with an odd width.
-- **Mirror cubic blocks** / **Mirror non-cubic blocks** (both on by default) turn blocks on the other side so they mirror the ones you place, for example wedges and weapon outputs facing outward on both sides.
+### Lighten Mode
 
-### Selection
+Removes all shadows and ambient occlusion rendering. Dark interiors become fully lit, making it easier to see what you are building. **Toggle it off periodically** to check how your ship actually looks with normal lighting.
 
-- **Copy Brush:** click **\*PICK AREA\***, then click the two corners of the area to copy.
-- **Cut Mode:** with this on, copying an area also removes those blocks and puts them in your inventory, like a cut. Undo puts them back.
-- **Paste:** shows the copy as a preview; click to place it. You need the blocks in your inventory. While pasting:
-  - Mouse wheel rotates the copy (hold `Left Shift` for the X axis, `Left Ctrl` for the Z axis).
-  - `Left Alt` + arrow keys / `Page Up` / `Page Down` nudge it one block (add `Left Shift` for 10).
-- Links between blocks (C/V) are kept when both ends are inside the copied area.
-- **Templates:** save a copy under a name with tags, and load it later in any build. Search by name or tag.
-- **Remove/Replace:** pick a block type (from the list or **Pick with camera**). Right-click then only removes that type of block. Tick **Only replace** to swap those blocks for your selected block instead. This is invaluable for **refitting ships**.
-- **Highlight Selected in Entity:** shows every block of the chosen type in the structure.
+### Area Sliders
 
-### Hotbar
+Three sliders — one for each axis — expand the placement/removal box so you can place or remove multiple blocks in a rectangular volume with a single click.
 
-Save your hotbar as a named **layout** and load it again later.
+> Server admins can set maximum slider values in `server.cfg`. In singleplayer the limit is configurable in the same file.
 
-### Color Finder
+### Orientation
 
-Find a block by color: enter a hex color, pick a random one, or adjust saturation and brightness, then **COPY TO HOTBAR**.
+When a rotatable block is selected (wedges, sloped hull, directional blocks), the orientation picker lets you choose which way the block faces. You can also scroll the mouse wheel to cycle orientations while holding `Left Alt`.
 
-### Block Mixer
+### Undo / Redo
 
-Choose up to 10 blocks. With the mixer on, each block you place is picked at random from them — great for weathered or patterned hulls. **SET FROM HOTBAR** fills it from your hotbar.
+- **Undo** (`Ctrl+Z` or the button): Reverts your most recent build action.
+- **Redo**: Re-applies an undone action.
 
-### Fill Tool
+Multiple undo steps are supported.
 
-Click **Place Fill Origin** and click a spot, then press **Fill** to flood the connected space (or the connected blocks of one type) with your selected block. The slider sets how many blocks each press adds.
+### Copy / Paste
 
-### Build Helpers
+1. Click **Copy**, then drag to select a rectangular volume.
+2. Click **Paste** to place the copied region. You need the required blocks in your inventory.
 
-Shows a guide shape in the world (**line**, **circle**, **ellipsoid** or **torus**) to build along. Tick **Restrict Building to Helper** to only place blocks inside it.
+**Connections are preserved** if both the controlling block and the controlled block are within the copied region.
 
-### Docking
+### Symmetry Planes
 
-**Create Docking** builds a new docked entity in two clicks: pick the rail, then pick where its core goes and which way it faces. See [Docking & Turrets](02-docking-and-turrets.md).
+Symmetry planes are the most powerful build tool. You place invisible walls that divide your structure; placing a block on one side automatically mirrors it to the other.
 
-### Display
+- Place symmetry planes on X, Y, and Z simultaneously to build in all three axes at once — this quadruples (or eighths for all three axes) your build speed.
+- **Odd symmetry** mode offsets the plane to sit at the centre of a block rather than between blocks, useful for ships with an odd-numbered width.
 
-Toggles that help while building:
+### Mirror Mode
 
-- **Buildlight:** a flashlight for building in dark areas (also `P`).
-- **Lighten up blocks:** removes shadows so dark interiors are fully lit. Turn it off now and then to see how your ship really looks.
-- Structure info, extra block info, reactor convex hull, and center of mass indicators.
+When symmetry planes are active, **Mirror Mode** also mirrors the **orientation** of directional blocks. Without it, a weapon turret on the left side would face the same direction as the one on the right; with mirror mode it faces the opposite direction (correctly outward).
+
+### Remove Filter
+
+Select a specific block type from the dropdown and only that block type will be removed when you right-click — all other blocks are ignored. Works with area sliders and symmetry planes.
+
+This is invaluable for **refitting ships**: you can quickly strip all power blocks without accidentally removing hull or weapons.
