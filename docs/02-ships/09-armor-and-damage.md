@@ -107,9 +107,18 @@ Armor thickness is only calculated up to 32 blocks, but thicker armor is still m
 
 **Overpenetration** occurs when a cannon hit does more than 20 times an armor block's HP before accounting for reduction by armor value. When **overpenetrating**, the cannon shell will pass straight through the block instead of stopping and spreading damage to all surrounding blocks. **Overpenetration** does not apply to damage beams and missiles.
 
+## Armor Hit Points
+Every armor block on a ship (or station, or planet...) contributes to the structure's pool of Armor Hit Points, or **AHP**.
+While AHP remains above zero, heavy armor will be even tougher, and the extra damage absorbed will be incurred as AHP damage rather than block destruction.
+The effect of AHP is a multiplier of the effect of armor thickness, so thin armor will still be easier to break through than thick armor even if a ship has some or all AHP remaining.
+
+## Bombs & Armor
+Just as with shields, armor's damage reduction mechanics are bypassed by bombs (the Missile/Missile combo weapon). They are a high-risk, high-reward weapon which is relatively easy for an agile ship to avoid, however a heavy and slow armored ship may be vulnerable to bombers.
+Bomb damage is still absorbed by raw block hitpoints, however, so Basic and Standard Armor, with their higher hitpoints per weight, are likely the most efficient way to 'soak up' bomb explosions before the blast wave can reach critical systems.
+
 ### Key Takeaways and Practical Implications
 
-- **Small hits are almost completely absorbed.** A wall of armor is nearly impenetrable against many weak shots.
+- **Small hits are almost completely absorbed by substantial armor.** A wall of armor is nearly impenetrable against many weak shots.
 - **Massive single cannon hits penetrate.** A cannon shot doing more than 20× the armor block's HP bypasses it entirely via **overpenetration**.
 
 | Situation | Best approach |
