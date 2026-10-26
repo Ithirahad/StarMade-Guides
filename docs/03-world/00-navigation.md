@@ -18,7 +18,7 @@ A **sector** is the basic unit of space. Your current sector coordinates (`[X, Y
 
 ### Systems
 
-A **system** is a 16 × 16 × 16 cube of sectors. A **star** is usually located near the centre of each system. Resources and encounter types vary depending on how far a sector is from the star.
+A **system** is a 16 × 16 × 16 cube of sectors. **Stars** and **wormholes** are always located near the centre of their respective System. Resources and encounter types vary depending on how far a sector is from the star.
 
 > **Distance from the star affects asteroid types.** Rare mineral asteroids are more likely to appear in sectors farther from the star.
 
@@ -33,8 +33,7 @@ Use the filter checkboxes to show or hide:
 - Asteroids
 - Stations
 - Ships (player and NPC)
-- Jump beacons
-- Debris
+- Radar beacons
 
 ### Selecting a Target
 
