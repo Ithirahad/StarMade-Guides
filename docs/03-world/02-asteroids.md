@@ -3,6 +3,7 @@
 ![asteroids_fig1.jpg](https://web.archive.org/web/20241010090719im_/https://starmadepedia.net/images/6/61/Asteroids.jpg)
 
 Asteroids are massive boulders found in space orbiting stars. They are a standard source of valuable Ores and Crystals needed for building, as well as bulk stone materials. They are harvested with ship-based Salvage Systems.
+Each star system's asteroids has a different rock composition, but any color of asteroid can contain the same resources.
 
 ### Where To Find Them
 
