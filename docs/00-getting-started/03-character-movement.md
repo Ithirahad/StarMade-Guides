@@ -47,5 +47,5 @@ To break the alignment, simply fly away from the structure or enter a different 
 ## Tips
 
 - Holding `Left Shift` switches to a slower walk pace in gravity mode.
-- Deselecting your weapon (scroll past the last hotbar slot) lets you **mine** asteroid resources by holding the right mouse button.
+- If you are not wielding a weapon, the right mouse button shoots a harvesting beam which lets you **mine** asteroid resources as well as pick up blocks.
 - In build mode inside a ship, movement is the same as zero-G but you pass through blocks — hold `Left Shift` for much faster movement around large ships.
