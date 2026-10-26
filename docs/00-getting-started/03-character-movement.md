@@ -38,9 +38,9 @@ When you are floating near a ship or station you can **align** yourself to it by
 2. Makes you **move with the structure** if it is in motion.
 
 This is very useful for:
-- Boarding a moving ship through a hatch
-- Working on the outside of a ship without drifting away
-- Avoiding being left behind when a crewed ship accelerates
+- Moving around inside a piloted or AI-controlled ship without getting bashed into walls or left behind entirely when it moves
+- Fitting through small doors that may only accommodate a character facing the right direction
+- Placing blocks with the proper orientation as an astronaut (the build preview [`CTRL`] updates its orientation with your alignment)
 
 To break the alignment, simply fly away from the structure or enter a different gravity field.
 
